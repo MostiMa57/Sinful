@@ -1,0 +1,79 @@
+.griddy{
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr;
+    
+}
+
+.first{
+    background-color: lightgreen;
+}
+
+.second{
+    background-color: lightsalmon;
+}
+
+.third{
+    background-color: lightseagreen;
+}
+
+.flexy {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.flexyy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexxy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border: solid;
+    border-color: gray;
+
+}
+
+.flex1 {
+    background-color: aqua;
+    width: 200px;
+}
+
+.flex2 {
+    background-color: blueviolet;
+    width: 75px;
+}
+
+.item1 {
+    background-color: cadetblue;
+    width: 50px;
+}
+
+.item2 {
+    background-color: brown;
+    flex: 1;
+    color: white;
+}
+
+.item3 {
+    background-color: cadetblue;
+    width: 50px;
+}
+
+.item4 {
+    background-color: aquamarine;
+    width: 50px;
+}
+
+.item22 {
+    background-color: bisque;
+    width: 50px;
+}
+
+/* SESSION 2 BREAK */
+

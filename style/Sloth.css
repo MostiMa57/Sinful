@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #2A7B9B;
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 88%, rgba(237, 221, 83, 1) 100%);
+}
+
+#wheelOfFortune {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+#wheel {
+  display: block;
+}
+
+#result-popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  padding: 15px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#result-popup img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+#spin {
+  font: 1.5em/0 sans-serif;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin: -15%;
+  background: #fff;
+  color: #000000;
+  box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: 0.8s;
+  z-index: 5;
+}
+
+#spin::after {
+  content: '';
+  position: absolute;
+  top: -17px;
+  border: 10px solid transparent;
+  border-bottom-color: currentColor;
+  border-top: none;
+}

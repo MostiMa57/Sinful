@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.eye-wrapper {
+  position: relative;
+}
+
+.eye {
+  width: 60vmin;
+  height: 30vmin;
+  background: #eee;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: ellipse(50% 35% at 50% 50%);
+  filter: drop-shadow(0 0 30px #a100ff);
+  transform: rotate(-1deg);
+}
+
+.iris-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 70%;
+  position: absolute;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: transform 0.1s linear;
+}
+
+.iris {
+  width: 100%;
+  height: 100%;
+  background: teal;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pupil {
+  width: 40%;
+  height: 40%;
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ffff, 0 0 16px #ff00ff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pupil:hover {
+    background-color: #ff0044;
+}
+
+.iris-link:hover .pupil {
+  box-shadow: 0 0 14px #ff0044, 0 0 28px #ff0044;
+  transform: scale(1.1);
+}
+
+.iris-link:active .pupil {
+  box-shadow: 0 0 24px #ffffff, 0 0 50px #ff00ff;
+  transform: scale(1.2);
+}
