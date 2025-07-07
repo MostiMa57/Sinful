@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smooth Evading Button</title>
+  <style>
+    #evade {
+      position: absolute;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: left 0.4s ease, top 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <button id="evade">Catch me!</button>
+
+  <script>
+    const btn = document.getElementById('evade');
+    const escapeRadius = 100;
+
+    window.addEventListener('mousemove', e => {
+      const rect = btn.getBoundingClientRect();
+      const bx = rect.left + rect.width / 2;
+      const by = rect.top + rect.height / 2;
+      const dist = Math.hypot(e.clientX - bx, e.clientY - by);
+
+      if (dist < escapeRadius) {
+        const x = Math.random() * (window.innerWidth  - rect.width);
+        const y = Math.random() * (window.innerHeight - rect.height);
+        btn.style.left = `${x}px`;
+        btn.style.top  = `${y}px`;
+      }
+    });
+
+    btn.addEventListener('click', () => {
+        btn.style.backgroundColor = '#4CAF50';
+        btn.textContent = 'Caught!';
+    });
+  </script>
+</body>
+</html>

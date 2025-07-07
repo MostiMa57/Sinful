@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style/Nebak.css">
+    <link rel="shortcut icon" href="images/wlee.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Save Your Family</h1>
+    <p>
+        Ayo tebak angka dari 1-100, tiap tebakan yang salah anggota keluarga hilang 1 jadi tebak dengan hati-hati ya
+    </p>
+
+    <div class="form">
+        <label for="guessField">Coba Tebak: </label>
+
+        <input type="text" id="guessField" class="guessField">
+
+        <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+    </div>
+
+    <script type="text/javascript">
+
+        // angka random
+        let y = Math.floor(Math.random() * 100 + 1);
+
+        // brp kali nebak
+        let guess = 1;
+
+        //ada suara cuy
+        const clickSound = new Audio ('audio/selamat.mp3')
+        const myInput = document.getElementById('submitguess');  
+        myInput.addEventListener('click', () => {
+            clickSound.play();
+        });      
+        
+
+        document.getElementById("submitguess").onclick = function () {
+
+            // Angka yg ditebak sm user    
+            let x = document.getElementById("guessField").value;
+            
+
+            if (x == y) {
+                alert("SELAMAT!!! ANGGOTA KELUARGA YANG HILANG HANYA " + guess + " ORANG ");
+                
+            }
+
+            /* Ni ntok ngecek angka lbh besar atau kecil*/
+            else if (x > y) {
+                guess++;
+                alert("Kebesaran itu");
+            }
+            else {
+                guess++;
+                alert("Kekecilan itu")
+            }
+        }
+    </script>
+</body>
+
+</html>
