@@ -1,18 +1,38 @@
-let angka = [];
-angka.push(10);
-angka.push(20);
-angka.push(30);
-console.log(angka);
+const todoArr = ['nenen', 'comlai'];
 
-const bangka = [4,31,642,6,2,64,41];
 
-const barule = bangka.map()
+renderTodoList();
+function renderTodoList() {
+    let todoArrList = '';
 
-let libra = {
-    skin: "zodiac",
-    harga: 230000,
-    limited: true
-};
+    for (i = 0; i < todoArr.length; i++){
+        const todor = todoArr[i];
+        const html = `<p>${todor}</p>`;
+        todoArrList += html;
+    }
 
-libra.skin;
+    document.querySelector('.js-todo-list')
+        .innerHTML = todoArrList;
+}
+
+
+function todoList() {
+    const inputElement = document.querySelector('.js-list-input');
+    const name = inputElement.value;
+
+    todoArr.push(name);
+    console.log(todoArr);
+    
+    inputElement.value = '';
+    renderTodoList();
+}
+
+// let i = 0;
+
+// while (i <= 5) {
+//     console.log(i);
+//     i++;
+// }
+
+
 

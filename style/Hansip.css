@@ -1,0 +1,50 @@
+/* body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 80px;
+    color: white;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+.bigContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttContain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.butYes, .butNo {
+    color: white;
+    border-radius: 4px;
+    width: 250px;
+    height: 100px;
+    background-color: rgb(220, 39, 220);
+    font-size: 25px;
+    margin-left: 13px;
+    margin-right: 13px;
+    font-weight: 700;
+    border-color: aliceblue;
+    border: 1px solid;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(158, 29, 158);
+}
+
+button:active {
+    background-color: rgb(114, 21, 114);
+} */

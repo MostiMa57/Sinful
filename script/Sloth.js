@@ -58,8 +58,8 @@ function drawWheel() {
     const img = loadedImages[i];
     if (img) {
       const angleMid = startAngle + arc / 2;
-      const imgX = radius + Math.cos(angleMid) * radius * 0.6 - 20;
-      const imgY = radius + Math.sin(angleMid) * radius * 0.6 - 20;
+      const imgX = radius + Math.cos(angleMid) * radius * 0.7 - 20;
+      const imgY = radius + Math.sin(angleMid) * radius * 0.7 - 20;
       ctx.save();
       ctx.translate(imgX + 20, imgY + 20);
       ctx.rotate(angleMid);
@@ -91,7 +91,7 @@ function animate() {
 
 spinEl.addEventListener('click', () => {
   if (!angVel) {
-    angVel = Math.random() * 0.3 + 0.35;
+    angVel = 0.5;
     hasShownResult = false;
     resultBox.classList.add('hidden');
   }

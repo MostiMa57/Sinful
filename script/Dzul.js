@@ -1,6 +1,7 @@
 const btnEl = document.getElementById("btn");
 const birthdayEl = document.getElementById("birthday");
 const resultEl = document.getElementById("result");
+ resultEl.style.color = "lime";
 
 function calculateAge() {
   const birthdayValue = birthdayEl.value;
